@@ -1,0 +1,1049 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="HeBuilds LLC provides basement remodeling, bathroom remodeling, and home improvement services throughout Greater Cincinnati."
+    />
+
+    <title>HeBuilds LLC | Greater Cincinnati Remodeling</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+
+    <style>
+      /* TOP BAR CONTACT INFORMATION */
+
+      .topbar__contact {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 24px;
+        flex-wrap: wrap;
+        margin-right: -32px;
+      }
+
+      .topbar__contact a {
+        color: inherit;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .topbar__contact a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 640px) {
+        .topbar__contact {
+          justify-content: center;
+          gap: 8px 18px;
+          margin-right: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ========================================
+       TOP INFORMATION BAR
+    ======================================== -->
+
+    <div class="topbar">
+      <div class="row topbar__row">
+        <p>Serving Greater Cincinnati and Surrounding Communities</p>
+
+        <div class="topbar__contact">
+          <a href="tel:5135006096"> Call: 513-500-6096 </a>
+
+          <a href="mailto:hebuildsllc@gmail.com">
+            Email: hebuildsllc@gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================
+       NAVIGATION
+    ======================================== -->
+
+    <section id="landing">
+      <nav class="navbar">
+        <div class="row nav__row">
+          <!-- COMPANY BRANDING -->
+
+          <a
+            href="index.html"
+            class="nav__brand"
+            aria-label="HeBuilds LLC home"
+          >
+            <img
+              class="nav__logo"
+              src="assets/logo-metallic.svg"
+              alt="HeBuilds LLC logo"
+            />
+
+            <span class="nav__brand-text">
+              <span class="nav__brand-name">
+                HeBuilds
+                <span class="nav__brand-llc">LLC</span>
+              </span>
+
+              <span class="nav__brand-tagline">
+                GREATER CINCINNATI REMODELING
+              </span>
+            </span>
+          </a>
+
+          <!-- DESKTOP LINKS -->
+
+          <ul class="nav__link--list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">Home</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="about.html" class="nav__link">About Us</a>
+            </li>
+
+            <li class="nav__item nav__item--dropdown">
+              <a href="index.html#services" class="nav__link">
+                Services
+                <span class="dropdown__arrow"></span>
+              </a>
+
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="basement.html">Basement Remodeling</a>
+                </li>
+                <li>
+                  <a href="fullbath.html">Full Bathroom Remodeling</a>
+                </li>
+                <li>
+                  <a href="halfbath.html">Half Bathroom Remodeling</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav__item">
+              <a href="index.html#testimonials" class="nav__link">
+                Testimonials
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="index.html#quote" class="nav__link"> Contact </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="index.html#quote" class="nav__quote">
+                Request a Free Quote
+              </a>
+            </li>
+          </ul>
+
+          <!-- MOBILE MENU BUTTON -->
+
+          <button
+            class="btn__menu"
+            type="button"
+            onclick="openMenu()"
+            aria-label="Open navigation menu"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- MOBILE NAVIGATION -->
+
+      <div class="modal" id="mobile-menu">
+        <button
+          class="btn__menu btn__menu--close"
+          type="button"
+          onclick="closeMenu()"
+          aria-label="Close navigation menu"
+        >
+          &times;
+        </button>
+
+        <div class="modal__links">
+          <a href="index.html" class="modal__link" onclick="closeMenu()">
+            Home
+          </a>
+
+          <a href="about.html" class="modal__link" onclick="closeMenu()">
+            About Us
+          </a>
+
+          <details class="mobile__dropdown">
+            <summary class="modal__link">Services</summary>
+
+            <div class="mobile__submenu">
+              <a href="basement.html" onclick="closeMenu()">
+                Basement Remodeling
+              </a>
+
+              <a href="fullbath.html" onclick="closeMenu()">
+                Full Bathroom Remodeling
+              </a>
+
+              <a href="halfbath.html" onclick="closeMenu()">
+                Half Bathroom Remodeling
+              </a>
+            </div>
+          </details>
+
+          <a
+            href="index.html#testimonials"
+            class="modal__link"
+            onclick="closeMenu()"
+          >
+            Testimonials
+          </a>
+
+          <a href="index.html#quote" class="modal__link" onclick="closeMenu()">
+            Contact
+          </a>
+
+          <a
+            href="index.html#quote"
+            class="modal__link modal__link--primary"
+            onclick="closeMenu()"
+          >
+            Request a Free Quote
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <!-- ========================================
+         HERO SECTION
+      ======================================== -->
+
+      <section class="hero">
+        <div class="container">
+          <div class="row hero__row">
+            <div class="hero__content">
+              <div class="hero__identity">
+                <h1>
+                  Transform Your Space.
+                  <span>Love Your Home.</span>
+                </h1>
+              </div>
+
+              <p class="hero__description">
+                From beautiful basement transformations to thoughtfully designed
+                bathrooms, HeBuilds LLC helps Greater Cincinnati homeowners
+                bring their remodeling visions to life.
+              </p>
+
+              <div class="hero__actions">
+                <a href="#quote" class="button button--light">
+                  Request a Free Quote
+                </a>
+
+                <a href="#services" class="button button--outline-light">
+                  Explore Our Services
+                </a>
+              </div>
+            </div>
+
+            <div class="hero__image">
+              <img
+                src="assets/hero.png"
+                alt="Beautifully finished basement with comfortable seating and modern features"
+                fetchpriority="high"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================
+         ABOUT US SECTION
+      ======================================== -->
+
+      <section id="about" class="about">
+        <div class="container">
+          <div class="row about__row">
+            <div class="about__content">
+              <p class="about__subtitle">ABOUT HEBUILDS LLC</p>
+
+              <h2 class="about__title">
+                Quality Remodeling. Family-Centered Service.
+              </h2>
+
+              <p>
+                At HeBuilds LLC, we believe your home should reflect the way you
+                live. Whether you're finishing a basement, updating a bathroom,
+                or creating a more functional space, our goal is to deliver
+                workmanship you can appreciate for years to come.
+              </p>
+
+              <p>
+                We take pride in providing a personal remodeling experience
+                built on trust, communication, and attention to detail. Every
+                project is an opportunity to help homeowners make better use of
+                their space.
+              </p>
+
+              <p>
+                Our family-centered approach also includes working alongside
+                trusted family partners who specialize in plumbing and
+                electrical services, helping bring different aspects of a
+                remodeling project together.
+              </p>
+
+              <p class="about__closing">
+                <strong>
+                  From the first conversation to the final details, we're
+                  committed to helping you create a home you'll love.
+                </strong>
+              </p>
+            </div>
+
+            <!-- THREE BATHROOM PHOTOS -->
+
+            <div class="about__media">
+              <div class="about__image--top">
+                <img
+                  src="assets/full-bathroom/IMG_2657.PNG"
+                  alt="HeBuilds LLC bathroom remodeling project, main view"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="about__image--bottom">
+                <img
+                  src="assets/full-bathroom/IMG_2659.PNG"
+                  alt="HeBuilds LLC bathroom remodeling project, second view"
+                  loading="lazy"
+                />
+
+                <img
+                  src="assets/full-bathroom/IMG_2660.PNG"
+                  alt="HeBuilds LLC bathroom remodeling project, third view"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================
+         SERVICES SECTION
+      ======================================== -->
+
+      <section id="services" class="services section--light">
+        <div class="container">
+          <div class="row">
+            <div class="section__heading">
+              <p class="section__eyebrow">WHAT WE DO</p>
+
+              <h2>Our Remodeling Services</h2>
+
+              <p>
+                Explore our basement and bathroom remodeling services designed
+                to improve the comfort, functionality, and beauty of your home.
+              </p>
+            </div>
+
+            <div class="services__grid">
+              <!-- BASEMENT REMODELING -->
+
+              <article class="service__card">
+                <img
+                  src="assets/basement/img_9451.jpeg"
+                  alt="Finished basement remodeling project"
+                  loading="lazy"
+                />
+
+                <div class="service__card--content">
+                  <h3>Basement Remodeling</h3>
+
+                  <p>
+                    Turn your unfinished or outdated basement into a
+                    comfortable, functional living space. From family rooms and
+                    entertainment areas to additional living space, we help
+                    bring your basement ideas to life.
+                  </p>
+
+                  <div class="service__buttons">
+                    <a href="basement.html" class="button button--primary">
+                      Basement Gallery
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- BATHROOM REMODELING -->
+
+              <article class="service__card">
+                <img
+                  src="assets/full-bathroom/img_0151.jpg"
+                  alt="Beautiful bathroom remodeling project"
+                  loading="lazy"
+                />
+
+                <div class="service__card--content">
+                  <h3>Bathroom Remodeling</h3>
+
+                  <p>
+                    Refresh your bathroom with a thoughtful remodeling project
+                    that balances style and everyday functionality. Whether
+                    you're updating a full bathroom or improving a half bath, we
+                    can help transform the space.
+                  </p>
+
+                  <div class="service__buttons">
+                    <a href="fullbath.html" class="button button--primary">
+                      Full Bathroom Gallery
+                    </a>
+
+                    <a href="halfbath.html" class="button button--primary">
+                      Half Bathroom Gallery
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================
+         WHY CHOOSE US
+      ======================================== -->
+
+      <section class="benefits">
+        <div class="container">
+          <div class="row">
+            <div class="section__heading">
+              <p class="section__eyebrow">WHY HEBUILDS LLC</p>
+
+              <h2>Remodeling Built Around You</h2>
+
+              <p>
+                We believe a successful remodeling project starts with
+                understanding your home, your goals, and your expectations.
+              </p>
+            </div>
+
+            <div class="benefits__grid">
+              <article class="benefit__card">
+                <div class="benefit__number">01</div>
+
+                <h3>Family-Centered Service</h3>
+
+                <p>
+                  We value personal relationships and treat each remodeling
+                  project with care and attention.
+                </p>
+              </article>
+
+              <article class="benefit__card">
+                <div class="benefit__number">02</div>
+
+                <h3>Quality Craftsmanship</h3>
+
+                <p>
+                  We focus on thoughtful details, practical solutions, and work
+                  designed to enhance your home.
+                </p>
+              </article>
+
+              <article class="benefit__card">
+                <div class="benefit__number">03</div>
+
+                <h3>Clear Communication</h3>
+
+                <p>
+                  We want homeowners to feel informed and comfortable throughout
+                  the remodeling process.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================
+         OUR PROCESS
+      ======================================== -->
+
+      <section class="process section--light">
+        <div class="container">
+          <div class="row">
+            <div class="section__heading">
+              <p class="section__eyebrow">HOW IT WORKS</p>
+
+              <h2>Our Remodeling Process</h2>
+
+              <p>
+                A straightforward approach to planning and completing your
+                remodeling project.
+              </p>
+            </div>
+
+            <div class="process__grid">
+              <article class="process__step">
+                <div class="process__number">01</div>
+
+                <h3>Tell Us About Your Project</h3>
+
+                <p>
+                  Share your ideas, your goals, and the improvements you'd like
+                  to make to your home.
+                </p>
+              </article>
+
+              <article class="process__step">
+                <div class="process__number">02</div>
+
+                <h3>Plan Your Remodel</h3>
+
+                <p>
+                  We'll discuss your project and help identify a practical path
+                  toward your goals.
+                </p>
+              </article>
+
+              <article class="process__step">
+                <div class="process__number">03</div>
+
+                <h3>Bring Your Vision to Life</h3>
+
+                <p>
+                  Watch your space take shape as your remodeling plans become
+                  reality.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================
+         TESTIMONIALS
+      ======================================== -->
+
+      <section id="testimonials" class="testimonials">
+        <div class="container">
+          <div class="row">
+            <div class="section__heading">
+              <p class="section__eyebrow">HOMEOWNER EXPERIENCES</p>
+
+              <h2>What Our Customers Say</h2>
+
+              <p>
+                Examples of the kinds of remodeling experiences we strive to
+                provide.
+              </p>
+            </div>
+
+            <div class="testimonials__grid">
+              <!-- BASEMENT TESTIMONIAL -->
+
+              <article class="testimonial__card">
+                <div class="testimonial__stars" aria-label="Five stars">
+                  ★★★★★
+                </div>
+
+                <h3>Basement Transformation</h3>
+
+                <p class="testimonial__quote">
+                  "Our basement went from an unfinished space that we rarely
+                  used to one of our favorite areas in the house. The layout
+                  turned out beautifully, and the attention to detail made a
+                  tremendous difference. We now have a comfortable place where
+                  our family can relax and spend time together."
+                </p>
+
+                <div class="testimonial__customer">
+                  <div class="testimonial__avatar">MR</div>
+
+                  <div class="testimonial__customer-info">
+                    <h4>Michael R.</h4>
+                    <p>Basement Remodeling</p>
+                  </div>
+                </div>
+
+                <p class="testimonial__disclaimer">
+                  Sample testimonial — not an actual customer review.
+                </p>
+              </article>
+
+              <!-- BATHROOM TESTIMONIAL -->
+
+              <article class="testimonial__card">
+                <div class="testimonial__stars" aria-label="Five stars">
+                  ★★★★★
+                </div>
+
+                <h3>Beautiful Bathroom Remodel</h3>
+
+                <p class="testimonial__quote">
+                  "We wanted to update our bathroom and make it feel brighter
+                  and more functional. The finished space exceeded our
+                  expectations. Every detail came together beautifully, and the
+                  room now feels completely refreshed. It's a wonderful
+                  improvement to our home."
+                </p>
+
+                <div class="testimonial__customer">
+                  <div class="testimonial__avatar">JM</div>
+
+                  <div class="testimonial__customer-info">
+                    <h4>Jennifer M.</h4>
+                    <p>Bathroom Remodeling</p>
+                  </div>
+                </div>
+
+                <p class="testimonial__disclaimer">
+                  Sample testimonial — not an actual customer review.
+                </p>
+              </article>
+
+              <!-- BASEMENT + BATHROOM TESTIMONIAL -->
+
+              <article class="testimonial__card">
+                <div class="testimonial__stars" aria-label="Five stars">
+                  ★★★★★
+                </div>
+
+                <h3>Basement &amp; Bathroom Renovation</h3>
+
+                <p class="testimonial__quote">
+                  "We had been wanting to finish our basement and add a bathroom
+                  for years. The finished project gave our family so much more
+                  usable space. Everything flows together nicely, and having the
+                  additional bathroom has been incredibly convenient. We
+                  couldn't be happier with the transformation."
+                </p>
+
+                <div class="testimonial__customer">
+                  <div class="testimonial__avatar">DT</div>
+
+                  <div class="testimonial__customer-info">
+                    <h4>David &amp; Sarah T.</h4>
+                    <p>Basement &amp; Bathroom Remodeling</p>
+                  </div>
+                </div>
+
+                <p class="testimonial__disclaimer">
+                  Sample testimonial — not an actual customer review.
+                </p>
+              </article>
+            </div>
+
+            <!-- TESTIMONIAL CONTACT AREA -->
+
+            <div class="testimonials__cta">
+              <h3>Ready to Transform Your Home?</h3>
+
+              <p>Let's discuss your basement or bathroom remodeling project.</p>
+
+              <div class="testimonials__contact">
+                <a
+                  href="tel:5135006096"
+                  class="testimonials__contact-link"
+                  aria-label="Call HeBuilds LLC at 513-500-6096"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2
+                    19.79 19.79 0 0 1-8.63-3.07
+                    19.5 19.5 0 0 1-6-6
+                    19.79 19.79 0 0 1-3.07-8.67
+                    A2 2 0 0 1 4.11 2h3
+                    a2 2 0 0 1 2 1.72
+                    c.12.96.34 1.9.66 2.81
+                    a2 2 0 0 1-.45 2.11L8.09 9.91
+                    a16 16 0 0 0 6 6l1.27-1.27
+                    a2 2 0 0 1 2.11-.45
+                    c.91.32 1.85.54 2.81.66
+                    A2 2 0 0 1 22 16.92z"
+                    ></path>
+                  </svg>
+
+                  <span>513-500-6096</span>
+                </a>
+
+                <a
+                  href="mailto:hebuildsllc@gmail.com"
+                  class="testimonials__contact-link"
+                  aria-label="Email HeBuilds LLC"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    <path d="m22 7-10 6L2 7"></path>
+                  </svg>
+
+                  <span>hebuildsllc@gmail.com</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================
+         REQUEST A FREE QUOTE / CONTACT
+      ======================================== -->
+
+      <section id="quote" class="quote">
+        <div class="container">
+          <div class="row quote__layout">
+            <div class="quote__content">
+              <p class="section__eyebrow">GET IN TOUCH</p>
+
+              <h2>Let's Talk About Your Next Project</h2>
+
+              <p>
+                Thinking about remodeling your basement or bathroom? Tell us a
+                little about your project and we'll look forward to discussing
+                your ideas.
+              </p>
+
+              <div class="quote__highlights">
+                <p>✓ Basement Remodeling</p>
+                <p>✓ Full Bathroom Remodeling</p>
+                <p>✓ Half Bathroom Remodeling</p>
+                <p>✓ Greater Cincinnati Area</p>
+
+                <p>
+                  Phone:
+                  <a href="tel:5135006096">513-500-6096</a>
+                </p>
+
+                <p>
+                  Email:
+                  <a href="mailto:hebuildsllc@gmail.com">
+                    hebuildsllc@gmail.com
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div class="quote__form--wrapper">
+              <h3>Request a Free Quote</h3>
+
+              <p>
+                Complete the form below to tell us about your remodeling
+                project.
+              </p>
+
+              <form
+                class="quote__form"
+                action="https://formsubmit.co/hebuildsllc@gmail.com"
+                method="POST"
+              >
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New HeBuilds LLC Website Quote Request"
+                />
+
+                <input type="hidden" name="_captcha" value="true" />
+
+                <div class="form__honeypot">
+                  <input
+                    type="text"
+                    name="_honey"
+                    tabindex="-1"
+                    autocomplete="off"
+                  />
+                </div>
+
+                <div class="quote__form--grid">
+                  <div class="form__group">
+                    <label for="full-name">Full Name *</label>
+
+                    <input
+                      type="text"
+                      id="full-name"
+                      name="Full Name"
+                      placeholder="Your full name"
+                      autocomplete="name"
+                      required
+                    />
+                  </div>
+
+                  <div class="form__group">
+                    <label for="email">Email Address *</label>
+
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Your email address"
+                      autocomplete="email"
+                      required
+                    />
+                  </div>
+
+                  <div class="form__group">
+                    <label for="phone">Phone Number *</label>
+
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="Phone Number"
+                      placeholder="Your phone number"
+                      autocomplete="tel"
+                      required
+                    />
+                  </div>
+
+                  <div class="form__group">
+                    <label for="zip">ZIP Code</label>
+
+                    <input
+                      type="text"
+                      id="zip"
+                      name="ZIP Code"
+                      placeholder="Your ZIP code"
+                      autocomplete="postal-code"
+                    />
+                  </div>
+
+                  <div class="form__group">
+                    <label for="service">Project Type *</label>
+
+                    <select id="service" name="Project Type" required>
+                      <option value="">Select a service</option>
+                      <option value="Basement Remodeling">
+                        Basement Remodeling
+                      </option>
+                      <option value="Full Bathroom Remodeling">
+                        Full Bathroom Remodeling
+                      </option>
+                      <option value="Half Bathroom Remodeling">
+                        Half Bathroom Remodeling
+                      </option>
+                      <option value="Basement and Bathroom">
+                        Basement and Bathroom
+                      </option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <div class="form__group">
+                    <label for="timeline">Project Timeline</label>
+
+                    <select id="timeline" name="Project Timeline">
+                      <option value="">Select a timeline</option>
+                      <option value="As Soon As Possible">
+                        As Soon As Possible
+                      </option>
+                      <option value="Within 1-3 Months">
+                        Within 1–3 Months
+                      </option>
+                      <option value="Within 3-6 Months">
+                        Within 3–6 Months
+                      </option>
+                      <option value="Just Planning">Just Planning</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form__group">
+                  <label for="budget">Estimated Budget</label>
+
+                  <select id="budget" name="Estimated Budget">
+                    <option value="">Select a budget range</option>
+                    <option value="Under $5,000">Under $5,000</option>
+                    <option value="$5,000-$10,000">$5,000–$10,000</option>
+                    <option value="$10,000-$20,000">$10,000–$20,000</option>
+                    <option value="$20,000-$40,000">$20,000–$40,000</option>
+                    <option value="$40,000+">$40,000+</option>
+                    <option value="Not Sure">Not Sure Yet</option>
+                  </select>
+                </div>
+
+                <div class="form__group">
+                  <label for="message">Tell Us About Your Project *</label>
+
+                  <textarea
+                    id="message"
+                    name="Project Details"
+                    placeholder="Describe your remodeling ideas..."
+                    required
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="button button--primary quote__submit"
+                >
+                  Submit Quote Request
+                </button>
+
+                <p class="quote__privacy">
+                  Your information will only be used to respond to your inquiry.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========================================
+       FOOTER
+    ======================================== -->
+
+    <footer>
+      <div class="container">
+        <div class="row footer__row">
+          <!-- COMPANY INFORMATION -->
+
+          <div class="footer__column footer__company">
+            <a
+              href="index.html"
+              class="footer__logo"
+              aria-label="HeBuilds LLC home"
+            >
+              <img src="assets/logo-silver.svg" alt="HeBuilds LLC" />
+            </a>
+
+            <p>
+              HeBuilds LLC provides basement and bathroom remodeling services
+              for homeowners throughout Greater Cincinnati.
+            </p>
+          </div>
+
+          <!-- QUICK LINKS -->
+
+          <div class="footer__column">
+            <h3>Quick Links</h3>
+
+            <ul class="footer__links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="index.html#services">Services</a></li>
+              <li>
+                <a href="index.html#testimonials">Testimonials</a>
+              </li>
+              <li><a href="index.html#quote">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- SERVICES -->
+
+          <div class="footer__column">
+            <h3>Our Services</h3>
+
+            <ul class="footer__links">
+              <li>
+                <a href="basement.html">Basement Remodeling</a>
+              </li>
+              <li>
+                <a href="fullbath.html">Full Bathroom Remodeling</a>
+              </li>
+              <li>
+                <a href="halfbath.html">Half Bathroom Remodeling</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- CONTACT -->
+
+          <div class="footer__column">
+            <h3>Contact Us</h3>
+
+            <p>Greater Cincinnati, Ohio</p>
+
+            <p>
+              <a href="tel:5135006096">513-500-6096</a>
+            </p>
+
+            <p>
+              <a href="mailto:hebuildsllc@gmail.com"> hebuildsllc@gmail.com </a>
+            </p>
+
+            <a
+              href="index.html#quote"
+              class="button button--primary footer__button"
+            >
+              Request a Free Quote
+            </a>
+          </div>
+        </div>
+
+        <div class="row footer__bottom">
+          <p>&copy; 2026 HeBuilds LLC. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========================================
+       MOBILE MENU JAVASCRIPT
+    ======================================== -->
+
+    <script>
+      function openMenu() {
+        document.body.classList.add("menu--open");
+
+        const menuButton = document.querySelector(".navbar .btn__menu");
+
+        if (menuButton) {
+          menuButton.setAttribute("aria-expanded", "true");
+        }
+      }
+
+      function closeMenu() {
+        document.body.classList.remove("menu--open");
+
+        const menuButton = document.querySelector(".navbar .btn__menu");
+
+        if (menuButton) {
+          menuButton.setAttribute("aria-expanded", "false");
+        }
+      }
+    </script>
+  </body>
+</html>

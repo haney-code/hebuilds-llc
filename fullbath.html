@@ -1,0 +1,1642 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Explore bathroom remodeling projects by HeBuilds LLC in Greater Cincinnati. See original bathrooms, construction progress, and beautifully finished spaces."
+    />
+
+    <title>Full Bathroom Remodeling Gallery | HeBuilds LLC</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* ==========================================
+       FULL BATHROOM GALLERY
+    ========================================== */
+
+      .fullbath-page {
+        background-color: #f5f7fa;
+        color: #182c49;
+      }
+
+      /* ==========================================
+       TOP INFORMATION BAR
+    ========================================== */
+
+      .fullbath-topbar {
+        background-color: #182c49;
+        color: #ffffff;
+        padding: 12px 24px;
+      }
+
+      .fullbath-topbar__inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .fullbath-topbar p {
+        margin: 0;
+        color: #ffffff;
+        font-size: 13px;
+      }
+
+      .fullbath-topbar a {
+        color: #ffffff;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      /* ==========================================
+       HEADER AND NAVIGATION
+    ========================================== */
+
+      .fullbath-header {
+        background-color: #ffffff;
+        border-bottom: 1px solid #e4e8ee;
+        position: relative;
+        z-index: 100;
+      }
+
+      .fullbath-nav {
+        max-width: 1280px;
+        min-height: 94px;
+        margin: 0 auto;
+        padding: 16px 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .fullbath-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-shrink: 0;
+        text-decoration: none;
+        color: #182c49;
+      }
+
+      .fullbath-logo img {
+        display: block;
+        width: 105px;
+        height: auto;
+      }
+
+      .fullbath-logo span {
+        font-size: 21px;
+        font-weight: 800;
+      }
+
+      .fullbath-nav__links {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .fullbath-nav__links a {
+        color: #182c49;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 200ms ease;
+      }
+
+      .fullbath-nav__links a:hover {
+        color: #718096;
+      }
+
+      .fullbath-nav__dropdown {
+        position: relative;
+      }
+
+      .fullbath-nav__dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: -15px;
+        min-width: 235px;
+        margin: 0;
+        padding: 12px 0;
+        list-style: none;
+        background-color: #ffffff;
+        border: 1px solid #e4e8ee;
+        border-radius: 8px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        z-index: 200;
+      }
+
+      .fullbath-nav__dropdown-menu a {
+        display: block;
+        padding: 12px 18px;
+      }
+
+      .fullbath-nav__dropdown:hover .fullbath-nav__dropdown-menu,
+      .fullbath-nav__dropdown:focus-within .fullbath-nav__dropdown-menu {
+        display: block;
+      }
+
+      .fullbath-nav__quote {
+        display: inline-block;
+        padding: 13px 20px;
+        background-color: #243e63;
+        color: #ffffff;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 700;
+        white-space: nowrap;
+        transition: background-color 200ms ease;
+      }
+
+      .fullbath-nav__quote:hover {
+        background-color: #405a7d;
+      }
+
+      .fullbath-menu-button {
+        display: none;
+        background: transparent;
+        border: none;
+        color: #182c49;
+        font-size: 30px;
+        cursor: pointer;
+      }
+
+      /* ==========================================
+       MOBILE NAVIGATION
+    ========================================== */
+
+      .fullbath-mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: min(340px, 85vw);
+        height: 100vh;
+        background-color: #ffffff;
+        padding: 75px 28px 32px;
+        box-shadow: 10px 0 35px rgba(0, 0, 0, 0.16);
+        transform: translateX(-110%);
+        transition: transform 300ms ease;
+        overflow-y: auto;
+        z-index: 1000;
+        visibility: hidden;
+      }
+
+      .fullbath-mobile-menu.is-open {
+        transform: translateX(0);
+        visibility: visible;
+      }
+
+      .fullbath-mobile-menu__close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: transparent;
+        border: none;
+        color: #182c49;
+        font-size: 30px;
+        cursor: pointer;
+      }
+
+      .fullbath-mobile-menu__links {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .fullbath-mobile-menu__links a {
+        color: #182c49;
+        font-size: 17px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .fullbath-mobile-menu__label {
+        margin-top: 10px;
+        color: #718096;
+        font-size: 12px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .fullbath-mobile-menu__quote {
+        display: block;
+        padding: 14px 18px;
+        background-color: #243e63;
+        color: #ffffff !important;
+        text-align: center;
+        border-radius: 6px;
+      }
+
+      .fullbath-menu-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+      }
+
+      .fullbath-menu-overlay.is-open {
+        display: block;
+      }
+
+      /* ==========================================
+       GALLERY HERO
+    ========================================== */
+
+      .fullbath-hero {
+        background: linear-gradient(135deg, #182c49 0%, #304d73 100%);
+        padding: 90px 24px;
+        color: #ffffff;
+        text-align: center;
+      }
+
+      .fullbath-hero__inner {
+        max-width: 850px;
+        margin: 0 auto;
+      }
+
+      .fullbath-hero__eyebrow {
+        display: block;
+        margin-bottom: 18px;
+        color: #cbd5e1;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .fullbath-hero h1 {
+        margin: 0 0 24px;
+        color: #ffffff;
+        font-size: clamp(34px, 5vw, 56px);
+        line-height: 1.15;
+      }
+
+      .fullbath-hero p {
+        max-width: 720px;
+        margin: 0 auto;
+        color: #e2e8f0;
+        font-size: 17px;
+        line-height: 1.8;
+      }
+
+      /* ==========================================
+       GALLERY CATEGORY LINKS
+    ========================================== */
+
+      .fullbath-gallery-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+        padding: 26px 24px;
+        background-color: #ffffff;
+        border-bottom: 1px solid #e1e6ed;
+      }
+
+      .fullbath-gallery-links a {
+        display: inline-block;
+        padding: 12px 20px;
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+        color: #182c49;
+        background-color: #ffffff;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: all 200ms ease;
+      }
+
+      .fullbath-gallery-links a:hover,
+      .fullbath-gallery-links a.active {
+        background-color: #243e63;
+        border-color: #243e63;
+        color: #ffffff;
+      }
+
+      /* ==========================================
+       GALLERY INTRODUCTION
+    ========================================== */
+
+      .fullbath-intro {
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 80px 24px 45px;
+        text-align: center;
+      }
+
+      .fullbath-intro__eyebrow {
+        margin-bottom: 15px;
+        color: #526d91;
+        font-size: 13px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .fullbath-intro h2 {
+        margin-bottom: 20px;
+        color: #182c49;
+        font-size: clamp(28px, 4vw, 40px);
+      }
+
+      .fullbath-intro p {
+        color: #596579;
+        font-size: 16px;
+        line-height: 1.85;
+      }
+
+      /* ==========================================
+       THREE GALLERY SECTIONS
+    ========================================== */
+
+      .fullbath-section {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 65px 32px 90px;
+      }
+
+      .fullbath-section__heading {
+        max-width: 850px;
+        margin: 0 auto 42px;
+        text-align: center;
+      }
+
+      .fullbath-section__number {
+        display: block;
+        margin-bottom: 12px;
+        color: #64758b;
+        font-size: 12px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .fullbath-section__heading h2 {
+        margin-bottom: 18px;
+        color: #182c49;
+        font-size: clamp(30px, 4vw, 40px);
+      }
+
+      .fullbath-section__heading p {
+        color: #596579;
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      .fullbath-section--alternate {
+        max-width: none;
+        background-color: #eaf0f6;
+      }
+
+      .fullbath-section--alternate .fullbath-section__inner {
+        max-width: 1216px;
+        margin: 0 auto;
+      }
+
+      /* ==========================================
+       PHOTO GRID
+    ========================================== */
+
+      .fullbath-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px;
+      }
+
+      .fullbath-photo {
+        margin: 0;
+        overflow: hidden;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 6px 24px rgba(24, 44, 73, 0.09);
+        transition:
+          transform 300ms ease,
+          box-shadow 300ms ease;
+      }
+
+      .fullbath-photo:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 32px rgba(24, 44, 73, 0.16);
+      }
+
+      .fullbath-photo a {
+        display: block;
+        overflow: hidden;
+        text-decoration: none;
+      }
+
+      .fullbath-photo img {
+        display: block;
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        transition: transform 300ms ease;
+      }
+
+      .fullbath-photo:hover img {
+        transform: scale(1.035);
+      }
+
+      .fullbath-photo figcaption {
+        padding: 19px 18px;
+        color: #182c49;
+        font-size: 15px;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .fullbath-photo figcaption span {
+        display: block;
+        margin-top: 6px;
+        color: #718096;
+        font-size: 12px;
+        font-weight: 400;
+      }
+
+      /* ==========================================
+       QUOTE SECTION
+    ========================================== */
+
+      .fullbath-cta {
+        padding: 85px 24px;
+        background-color: #182c49;
+        color: #ffffff;
+        text-align: center;
+      }
+
+      .fullbath-cta__inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+
+      .fullbath-cta h2 {
+        margin-bottom: 20px;
+        color: #ffffff;
+        font-size: clamp(28px, 4vw, 42px);
+      }
+
+      .fullbath-cta p {
+        margin-bottom: 30px;
+        color: #e2e8f0;
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      .fullbath-cta__button {
+        display: inline-block;
+        padding: 16px 32px;
+        border-radius: 6px;
+        background-color: #ffffff;
+        color: #182c49;
+        font-weight: 800;
+        text-decoration: none;
+        transition: background-color 200ms ease;
+      }
+
+      .fullbath-cta__button:hover {
+        background-color: #e2e8f0;
+      }
+
+      /* ==========================================
+       FOOTER
+    ========================================== */
+
+      .fullbath-footer {
+        background-color: #101f35;
+        color: #ffffff;
+        padding: 65px 32px 25px;
+      }
+
+      .fullbath-footer__inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 45px;
+      }
+
+      .fullbath-footer__logo {
+        display: block;
+        width: 135px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+
+      .fullbath-footer__brand p {
+        max-width: 300px;
+        color: #cbd5e1;
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      .fullbath-footer h3 {
+        margin-bottom: 22px;
+        color: #ffffff;
+        font-size: 16px;
+      }
+
+      .fullbath-footer ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .fullbath-footer li {
+        margin-bottom: 13px;
+      }
+
+      .fullbath-footer a {
+        color: #cbd5e1;
+        font-size: 14px;
+        line-height: 1.6;
+        text-decoration: none;
+      }
+
+      .fullbath-footer a:hover {
+        color: #ffffff;
+      }
+
+      .fullbath-footer__bottom {
+        max-width: 1280px;
+        margin: 45px auto 0;
+        padding-top: 24px;
+        border-top: 1px solid #34455e;
+        color: #cbd5e1;
+        font-size: 13px;
+        text-align: center;
+      }
+
+      /* ==========================================
+       TABLET RESPONSIVE
+    ========================================== */
+
+      @media (max-width: 1024px) {
+        .fullbath-nav__links {
+          display: none;
+        }
+
+        .fullbath-nav__quote {
+          display: none;
+        }
+
+        .fullbath-menu-button {
+          display: block;
+        }
+
+        .fullbath-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .fullbath-footer__inner {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      /* ==========================================
+       MOBILE RESPONSIVE
+    ========================================== */
+
+      @media (max-width: 640px) {
+        .fullbath-topbar__inner {
+          flex-direction: column;
+          text-align: center;
+          gap: 6px;
+        }
+
+        .fullbath-nav {
+          min-height: 76px;
+          padding: 12px 20px;
+        }
+
+        .fullbath-logo img {
+          width: 80px;
+        }
+
+        .fullbath-logo span {
+          font-size: 17px;
+        }
+
+        .fullbath-hero {
+          padding: 65px 22px;
+        }
+
+        .fullbath-hero p {
+          font-size: 15px;
+        }
+
+        .fullbath-gallery-links {
+          flex-direction: column;
+        }
+
+        .fullbath-gallery-links a {
+          text-align: center;
+        }
+
+        .fullbath-intro {
+          padding: 60px 22px 20px;
+        }
+
+        .fullbath-section {
+          padding: 60px 20px 75px;
+        }
+
+        .fullbath-grid {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+
+        .fullbath-photo img {
+          height: 340px;
+        }
+
+        .fullbath-cta {
+          padding: 70px 22px;
+        }
+
+        .fullbath-footer {
+          padding: 55px 24px 25px;
+        }
+
+        .fullbath-footer__inner {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="fullbath-page">
+    <!-- ==========================================
+       TOP INFORMATION BAR
+  ========================================== -->
+
+    <div class="fullbath-topbar">
+      <div class="fullbath-topbar__inner">
+        <p>Serving Greater Cincinnati and Surrounding Communities</p>
+
+        <a href="tel:5135006096"> Call Us: 513-500-6096 </a>
+      </div>
+    </div>
+
+    <!-- ==========================================
+       HEADER AND NAVIGATION
+  ========================================== -->
+
+    <header class="fullbath-header">
+      <nav class="fullbath-nav" aria-label="Main navigation">
+        <!-- LOGO -->
+
+        <a
+          href="index.html"
+          class="fullbath-logo"
+          aria-label="HeBuilds LLC home"
+        >
+          <img src="assets/logo-metallic.svg" alt="HeBuilds LLC logo" />
+
+          <span>HeBuilds LLC</span>
+        </a>
+
+        <!-- DESKTOP NAVIGATION -->
+
+        <ul class="fullbath-nav__links">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+
+          <li>
+            <a href="index.html#about">About Us</a>
+          </li>
+
+          <li class="fullbath-nav__dropdown">
+            <a href="index.html#services"> Services &#9662; </a>
+
+            <ul class="fullbath-nav__dropdown-menu">
+              <li>
+                <a href="basement.html"> Basement Remodeling </a>
+              </li>
+
+              <li>
+                <a href="fullbath.html" aria-current="page">
+                  Full Bathroom Remodeling
+                </a>
+              </li>
+
+              <li>
+                <a href="halfbath.html"> Half Bathroom Remodeling </a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="index.html#testimonials"> Testimonials </a>
+          </li>
+
+          <li>
+            <a href="index.html#quote"> Contact </a>
+          </li>
+        </ul>
+
+        <!-- FREE QUOTE BUTTON -->
+
+        <a href="index.html#quote" class="fullbath-nav__quote">
+          Request a Free Quote
+        </a>
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+          class="fullbath-menu-button"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-controls="fullbath-mobile-menu"
+          aria-expanded="false"
+          onclick="openFullbathMenu()"
+        >
+          &#9776;
+        </button>
+      </nav>
+    </header>
+
+    <!-- ==========================================
+       MOBILE MENU OVERLAY
+  ========================================== -->
+
+    <div
+      class="fullbath-menu-overlay"
+      id="fullbath-menu-overlay"
+      onclick="closeFullbathMenu()"
+    ></div>
+
+    <!-- ==========================================
+       MOBILE NAVIGATION
+  ========================================== -->
+
+    <nav
+      class="fullbath-mobile-menu"
+      id="fullbath-mobile-menu"
+      aria-label="Mobile navigation"
+      aria-hidden="true"
+    >
+      <button
+        class="fullbath-mobile-menu__close"
+        type="button"
+        aria-label="Close navigation menu"
+        onclick="closeFullbathMenu()"
+      >
+        &times;
+      </button>
+
+      <ul class="fullbath-mobile-menu__links">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+
+        <li>
+          <a href="index.html#about">About Us</a>
+        </li>
+
+        <li class="fullbath-mobile-menu__label">Our Services</li>
+
+        <li>
+          <a href="basement.html"> Basement Remodeling </a>
+        </li>
+
+        <li>
+          <a href="fullbath.html"> Full Bathroom Remodeling </a>
+        </li>
+
+        <li>
+          <a href="halfbath.html"> Half Bathroom Remodeling </a>
+        </li>
+
+        <li>
+          <a href="index.html#testimonials"> Testimonials </a>
+        </li>
+
+        <li>
+          <a href="index.html#quote"> Contact </a>
+        </li>
+
+        <li>
+          <a href="index.html#quote" class="fullbath-mobile-menu__quote">
+            Request a Free Quote
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- ==========================================
+         GALLERY HERO
+    ========================================== -->
+
+      <section class="fullbath-hero">
+        <div class="fullbath-hero__inner">
+          <span class="fullbath-hero__eyebrow">
+            HeBuilds LLC Project Gallery
+          </span>
+
+          <h1>Full Bathroom Remodeling</h1>
+
+          <p>
+            Explore the transformation process behind our bathroom remodeling
+            projects, from original spaces to construction progress and
+            beautifully finished bathrooms.
+          </p>
+        </div>
+      </section>
+
+      <!-- ==========================================
+         LINKS TO ALL THREE GALLERIES
+    ========================================== -->
+
+      <nav class="fullbath-gallery-links" aria-label="Remodeling galleries">
+        <a href="basement.html"> Basement Gallery </a>
+
+        <a href="fullbath.html" class="active" aria-current="page">
+          Full Bathroom Gallery
+        </a>
+
+        <a href="halfbath.html"> Half Bathroom Gallery </a>
+      </nav>
+
+      <!-- ==========================================
+         INTRODUCTION
+    ========================================== -->
+
+      <section class="fullbath-intro">
+        <p class="fullbath-intro__eyebrow">
+          Quality Remodeling. Family-Centered Service.
+        </p>
+
+        <h2>Every Great Bathroom Starts with a Vision</h2>
+
+        <p>
+          From outdated layouts to carefully crafted finished spaces, a bathroom
+          remodel involves planning, preparation, and attention to detail.
+          Browse our project photos to see the different stages of bathroom
+          remodeling and the results that thoughtful craftsmanship can achieve.
+        </p>
+      </section>
+
+      <!-- ==========================================
+         SECTION 1: BEFORE THE REMODEL
+         6 PHOTOS
+    ========================================== -->
+
+      <section class="fullbath-section" id="before">
+        <div class="fullbath-section__heading">
+          <span class="fullbath-section__number"> Stage One </span>
+
+          <h2>Before the Remodel</h2>
+
+          <p>
+            Every transformation begins somewhere. These photographs show
+            original bathroom layouts, fixtures, and finishes before remodeling
+            work begins.
+          </p>
+        </div>
+
+        <div class="fullbath-grid">
+          <!-- PHOTO 1 -->
+
+          <figure class="fullbath-photo">
+            <a
+              href="assets/full-bathroom/IMG_0151.JPG"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/full-bathroom/IMG_0151.JPG"
+                alt="Original bathroom before remodeling"
+                loading="lazy"
+              />
+            </a>
+
+            <figcaption>
+              Original Bathroom
+              <span>Before Remodeling</span>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 2 -->
+
+          <figure class="fullbath-photo">
+            <a
+              href="assets/full-bathroom/IMG_0152.JPG"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/full-bathroom/IMG_0152.JPG"
+                alt="Original bathtub and shower before renovation"
+                loading="lazy"
+              />
+            </a>
+
+            <figcaption>
+              Original Bath and Shower
+              <span>Before Remodeling</span>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 3 -->
+
+          <figure class="fullbath-photo">
+            <a
+              href="assets/full-bathroom/IMG_0155.JPG"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/full-bathroom/IMG_0155.JPG"
+                alt="Older bathroom vanity and finishes"
+                loading="lazy"
+              />
+            </a>
+
+            <figcaption>
+              Original Vanity
+              <span>Before Remodeling</span>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 4 -->
+
+          <figure class="fullbath-photo">
+            <a
+              href="assets/full-bathroom/IMG_0156.JPG"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/full-bathroom/IMG_0156.JPG"
+                alt="Original bathroom flooring and layout"
+                loading="lazy"
+              />
+            </a>
+
+            <figcaption>
+              Original Bathroom Layout
+              <span>Before Remodeling</span>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 5 -->
+
+          <figure class="fullbath-photo">
+            <a
+              href="assets/full-bathroom/IMG_2656.PNG"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/full-bathroom/IMG_2656.PNG"
+                alt="Bathroom vanity and fixtures before remodeling"
+                loading="lazy"
+              />
+            </a>
+
+            <figcaption>
+              Existing Bathroom Fixtures
+              <span>Before Remodeling</span>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 6 -->
+
+          <figure class="fullbath-photo">
+            <a
+              href="assets/full-bathroom/IMG_2658.PNG"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/full-bathroom/IMG_2658.PNG"
+                alt="Original shower with tile and glass block window"
+                loading="lazy"
+              />
+            </a>
+
+            <figcaption>
+              Original Shower
+              <span>Before Remodeling</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ==========================================
+         SECTION 2: DURING CONSTRUCTION
+         2 PHOTOS
+    ========================================== -->
+
+      <section
+        class="fullbath-section fullbath-section--alternate"
+        id="construction"
+      >
+        <div class="fullbath-section__inner">
+          <div class="fullbath-section__heading">
+            <span class="fullbath-section__number"> Stage Two </span>
+
+            <h2>During Construction</h2>
+
+            <p>
+              The work behind the finished result. These photographs highlight
+              demolition, exposed framing, plumbing, and the preparation
+              involved in transforming a bathroom.
+            </p>
+          </div>
+
+          <div class="fullbath-grid">
+            <!-- PHOTO 7 -->
+
+            <figure class="fullbath-photo">
+              <a
+                href="assets/full-bathroom/IMG_2668.PNG"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="assets/full-bathroom/IMG_2668.PNG"
+                  alt="Bathroom demolition around the shower area"
+                  loading="lazy"
+                />
+              </a>
+
+              <figcaption>
+                Shower Demolition
+                <span>Construction in Progress</span>
+              </figcaption>
+            </figure>
+
+            <!-- PHOTO 8 -->
+
+            <figure class="fullbath-photo">
+              <a
+                href="assets/full-bathroom/IMG_2666.PNG"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="assets/full-bathroom/IMG_2666.PNG"
+                  alt="Exposed bathroom wall framing and plumbing"
+                  loading="lazy"
+                />
+              </a>
+
+              <figcaption>
+                Wall and Plumbing Work
+                <span>Construction in Progress</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+         SECTION 3: THE FINISHED BATHROOM
+         16 PHOTOS
+    ========================================== -->
+
+      <section class="fullbath-section" id="finished">
+        <div class="fullbath-section__heading">
+          <span class="fullbath-section__number"> Stage Three </span>
+
+          <h2>The Finished Bathroom</h2>
+
+          <p>
+            The details make the difference. Explore completed bathroom projects
+            featuring beautiful tilework, updated showers, vanities, flooring,
+            and coordinated finishes.
+          </p>
+        </div>
+
+        <div class="fullbath-grid">
+          <!-- PHOTO 9 -->
+
+          <figure class="fullbath-photo">
+            <a
+              href="assets/full-bathroom/IMG_0014.jpeg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/full-bathroom/IMG_0014.jpeg"
+                alt="Finished bathroom remodeling project view"
+                loading="lazy"
+              />
+            </a>
+
+            <figcaption>
+              Completed Bathroom
+              <span>Finished Project</span>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 10 -->
+
+          <figure class="fullbath-photo">
+            <a
+              href="assets/full-bathroom/IMG_0015.jpeg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/full-bathroom/IMG_0015.jpeg"
+                alt="Finished shower and bathroom tilework"
+                loading="lazy"
+              />
+            </a>
+
+            <figcaption>
+              Shower Tilework
+              <span>Finished Project</span>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 11 -->
+
+          <figure class="fullbath-photo">
+            <a
+              href="assets/full-bathroom/IMG_0016.jpeg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/full-bathroom/IMG_0016.jpeg"
+                alt="Bathroom shower tile and finishing details"
+                loading="lazy"
+              />
+            </a>
+
+            <figcaption>
+              Custom Shower Details
+              <span>Finished Project</span>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 12 -->
+
+          <figure class="fullbath-photo">
+            <a
+              href="assets/full-bathroom/IMG_0017.jpeg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/full-bathroom/IMG_0017.jpeg"
+                alt="Completed bathroom vanity and bathtub area"
+                loading="lazy"
+              />
+            </a>
+
+            <figcaption>
+              Vanity and Bathtub
+              <span>Finished Project</span>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 13 -->
+
+          <figure class="fullbath-photo">
+            <a
+              href="assets/full-bathroom/IMG_0018.jpeg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/full-bathroom/IMG_0018.jpeg"
+                alt="Bathroom shower and finished flooring"
+                loading="lazy"
+              />
+            </a>
+
+            <figcaption>
+              Shower and Flooring
+              <span>Finished Project</span>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 14 -->
+
+          <figure class="fullbath-photo">
+            <a
+              href="assets/full-bathroom/IMG_0019.jpeg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/full-bathroom/IMG_0019.jpeg"
+                alt="Finished bathroom with vanity and toilet"
+                loading="lazy"
+              />
+            </a>
+
+            <figcaption>
+              Updated Bathroom Layout
+              <span>Finished Project</span>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 15 -->
+
+          <figure class="fullbath-photo">
+            <a
+              href="assets/full-bathroom/IMG_0020.jpeg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/full-bathroom/IMG_0020.jpeg"
+                alt="Finished bathroom interior"
+                loading="lazy"
+              />
+            </a>
+
+            <figcaption>
+              Finished Bathroom Interior
+              <span>Completed Project</span>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 16 -->
+
+          <figure class="fullbath-photo">
+            <a
+              href="assets/full-bathroom/IMG_0021.jpeg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/full-bathroom/IMG_0021.jpeg"
+                alt="Bathroom vanity and countertop"
+                loading="lazy"
+              />
+            </a>
+
+            <figcaption>
+              Vanity and Countertop
+              <span>Finished Project</span>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 17 -->
+
+          <figure class="fullbath-photo">
+            <a
+              href="assets/full-bathroom/IMG_0022.jpeg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/full-bathroom/IMG_0022.jpeg"
+                alt="Finished bathroom details"
+                loading="lazy"
+              />
+            </a>
+
+            <figcaption>
+              Finishing Details
+              <span>Completed Project</span>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 18 -->
+
+          <figure class="fullbath-photo">
+            <a
+              href="assets/full-bathroom/IMG_2657.PNG"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/full-bathroom/IMG_2657.PNG"
+                alt="Completed white double-sink bathroom vanity"
+                loading="lazy"
+              />
+            </a>
+
+            <figcaption>
+              Double-Sink Vanity
+              <span>Finished Bathroom</span>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 19 -->
+
+          <figure class="fullbath-photo">
+            <a
+              href="assets/full-bathroom/IMG_2659.PNG"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/full-bathroom/IMG_2659.PNG"
+                alt="New tiled shower with mosaic flooring"
+                loading="lazy"
+              />
+            </a>
+
+            <figcaption>
+              New Shower Tile
+              <span>Finished Bathroom</span>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 20 -->
+
+          <figure class="fullbath-photo">
+            <a
+              href="assets/full-bathroom/IMG_2660.PNG"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/full-bathroom/IMG_2660.PNG"
+                alt="Recessed shower storage niches"
+                loading="lazy"
+              />
+            </a>
+
+            <figcaption>
+              Recessed Shower Niches
+              <span>Custom Shower Details</span>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 21 -->
+
+          <figure class="fullbath-photo">
+            <a
+              href="assets/full-bathroom/IMG_2661.PNG"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/full-bathroom/IMG_2661.PNG"
+                alt="Finished shower with hexagonal floor tile"
+                loading="lazy"
+              />
+            </a>
+
+            <figcaption>
+              Shower Flooring
+              <span>Finished Bathroom</span>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 22 -->
+
+          <figure class="fullbath-photo">
+            <a
+              href="assets/full-bathroom/IMG_2662.PNG"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/full-bathroom/IMG_2662.PNG"
+                alt="Completed bathroom with vanity, toilet, and gray flooring"
+                loading="lazy"
+              />
+            </a>
+
+            <figcaption>
+              Updated Bathroom Layout
+              <span>Finished Bathroom</span>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 23 -->
+
+          <figure class="fullbath-photo">
+            <a
+              href="assets/full-bathroom/IMG_2663.PNG"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/full-bathroom/IMG_2663.PNG"
+                alt="Finished tiled shower wall and window"
+                loading="lazy"
+              />
+            </a>
+
+            <figcaption>
+              Shower Window and Tile
+              <span>Finished Bathroom</span>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 24 -->
+
+          <figure class="fullbath-photo">
+            <a
+              href="assets/full-bathroom/IMG_2664.PNG"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/full-bathroom/IMG_2664.PNG"
+                alt="Completed bathroom with white double vanity and mirror"
+                loading="lazy"
+              />
+            </a>
+
+            <figcaption>
+              Completed Bathroom
+              <span>Final Result</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ==========================================
+         REQUEST A FREE QUOTE
+    ========================================== -->
+
+      <section class="fullbath-cta">
+        <div class="fullbath-cta__inner">
+          <h2>Ready to Transform Your Bathroom?</h2>
+
+          <p>
+            Whether you're updating an older bathroom, replacing a shower, or
+            planning a complete renovation, HeBuilds LLC is ready to discuss
+            your project and help bring your vision to life.
+          </p>
+
+          <a href="index.html#quote" class="fullbath-cta__button">
+            Request a Free Quote
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==========================================
+       FOOTER
+  ========================================== -->
+
+    <footer class="fullbath-footer">
+      <div class="fullbath-footer__inner">
+        <!-- COMPANY -->
+
+        <div class="fullbath-footer__brand">
+          <a href="index.html">
+            <img
+              src="assets/logo-silver.svg"
+              alt="HeBuilds LLC"
+              class="fullbath-footer__logo"
+            />
+          </a>
+
+          <p>
+            Quality remodeling and family-centered service for homeowners
+            throughout Greater Cincinnati and surrounding communities.
+          </p>
+        </div>
+
+        <!-- QUICK LINKS -->
+
+        <div>
+          <h3>Quick Links</h3>
+
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+
+            <li>
+              <a href="index.html#about">About Us</a>
+            </li>
+
+            <li>
+              <a href="index.html#services">Services</a>
+            </li>
+
+            <li>
+              <a href="index.html#testimonials"> Testimonials </a>
+            </li>
+
+            <li>
+              <a href="index.html#quote"> Contact Us </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- SERVICES -->
+
+        <div>
+          <h3>Our Services</h3>
+
+          <ul>
+            <li>
+              <a href="basement.html"> Basement Remodeling </a>
+            </li>
+
+            <li>
+              <a href="fullbath.html"> Full Bathroom Remodeling </a>
+            </li>
+
+            <li>
+              <a href="halfbath.html"> Half Bathroom Remodeling </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+
+        <div>
+          <h3>Contact Us</h3>
+
+          <ul>
+            <li>
+              <a href="tel:5135006096"> 513-500-6096 </a>
+            </li>
+
+            <li>
+              <a href="mailto:hebuildsllc@gmail.com"> hebuildsllc@gmail.com </a>
+            </li>
+
+            <li>Greater Cincinnati, Ohio</li>
+
+            <li>
+              <a href="index.html#quote"> Request a Free Quote </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="fullbath-footer__bottom">
+        <p>&copy; 2026 HeBuilds LLC. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- ==========================================
+       MOBILE NAVIGATION JAVASCRIPT
+  ========================================== -->
+
+    <script>
+      function openFullbathMenu() {
+        const menu = document.getElementById("fullbath-mobile-menu");
+
+        const overlay = document.getElementById("fullbath-menu-overlay");
+
+        const button = document.querySelector(".fullbath-menu-button");
+
+        menu.classList.add("is-open");
+        overlay.classList.add("is-open");
+
+        menu.setAttribute("aria-hidden", "false");
+        button.setAttribute("aria-expanded", "true");
+
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeFullbathMenu() {
+        const menu = document.getElementById("fullbath-mobile-menu");
+
+        const overlay = document.getElementById("fullbath-menu-overlay");
+
+        const button = document.querySelector(".fullbath-menu-button");
+
+        menu.classList.remove("is-open");
+        overlay.classList.remove("is-open");
+
+        menu.setAttribute("aria-hidden", "true");
+        button.setAttribute("aria-expanded", "false");
+
+        document.body.style.overflow = "";
+      }
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          closeFullbathMenu();
+        }
+      });
+
+      document
+        .querySelectorAll(".fullbath-mobile-menu a")
+        .forEach(function (link) {
+          link.addEventListener("click", closeFullbathMenu);
+        });
+    </script>
+  </body>
+</html>

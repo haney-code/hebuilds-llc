@@ -1,0 +1,1282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Finished Basement Gallery | HeBuilds LLC</title>
+
+    <meta
+      name="description"
+      content="Explore completed basement remodeling projects by HeBuilds LLC, serving Greater Cincinnati and surrounding communities."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --navy: #182c49;
+        --navy-light: #294668;
+        --text: #202b3b;
+        --muted: #687487;
+        --background: #f5f7fa;
+        --white: #ffffff;
+        --border: #e3e7ed;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: var(--text);
+        background: var(--white);
+        line-height: 1.6;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      button {
+        font: inherit;
+        cursor: pointer;
+      }
+
+      /* TOP CONTACT BAR */
+
+      .topbar {
+        background: var(--navy);
+        color: var(--white);
+        padding: 12px 24px;
+      }
+
+      .topbar__inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .topbar__message {
+        font-size: 13px;
+      }
+
+      .topbar__contact {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 24px;
+      }
+
+      .topbar__contact a {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--white);
+        white-space: nowrap;
+      }
+
+      .topbar__contact a:hover {
+        text-decoration: underline;
+      }
+
+      /* NAVIGATION */
+
+      .header {
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        position: relative;
+        z-index: 20;
+      }
+
+      .nav {
+        max-width: 1280px;
+        min-height: 100px;
+        margin: 0 auto;
+        padding: 15px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+      }
+
+      .nav__logo img {
+        width: 145px;
+        height: auto;
+      }
+
+      .nav__links {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        list-style: none;
+      }
+
+      .nav__links a {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text);
+        transition: color 200ms ease;
+      }
+
+      .nav__links a:hover,
+      .nav__links a.active {
+        color: var(--navy-light);
+      }
+
+      .nav__quote {
+        background: var(--navy);
+        color: var(--white) !important;
+        padding: 13px 18px;
+        border-radius: 5px;
+        white-space: nowrap;
+      }
+
+      .nav__quote:hover {
+        background: var(--navy-light);
+      }
+
+      .menu-toggle {
+        display: none;
+        background: transparent;
+        border: 0;
+        font-size: 30px;
+        color: var(--navy);
+      }
+
+      /* HERO */
+
+      .hero {
+        background:
+          linear-gradient(rgba(24, 44, 73, 0.91), rgba(24, 44, 73, 0.91)),
+          url("assets/basement/IMG_9451.jpeg") center / cover no-repeat;
+
+        color: var(--white);
+        text-align: center;
+        padding: 105px 24px;
+      }
+
+      .hero__inner {
+        max-width: 850px;
+        margin: 0 auto;
+      }
+
+      .hero__eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 18px;
+      }
+
+      .hero h1 {
+        font-size: clamp(36px, 5vw, 60px);
+        line-height: 1.15;
+        margin-bottom: 22px;
+      }
+
+      .hero p {
+        font-size: 17px;
+        line-height: 1.8;
+        color: #e6ebf2;
+      }
+
+      /* GALLERY */
+
+      .gallery-section {
+        background: var(--background);
+        padding: 75px 24px 100px;
+      }
+
+      .gallery-container {
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+
+      .gallery-heading {
+        text-align: center;
+        margin-bottom: 48px;
+      }
+
+      .gallery-heading h2 {
+        font-size: clamp(28px, 3vw, 38px);
+        margin-bottom: 14px;
+      }
+
+      .gallery-heading p {
+        color: var(--muted);
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 28px;
+      }
+
+      .gallery-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 18px rgba(24, 44, 73, 0.06);
+        transition:
+          transform 200ms ease,
+          box-shadow 200ms ease;
+      }
+
+      .gallery-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 28px rgba(24, 44, 73, 0.13);
+      }
+
+      .gallery-card__image {
+        display: block;
+        width: 100%;
+        height: 285px;
+        overflow: hidden;
+        background: #e6eaf0;
+      }
+
+      .gallery-card__image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 300ms ease;
+      }
+
+      .gallery-card:hover img {
+        transform: scale(1.04);
+      }
+
+      .gallery-card__caption {
+        padding: 16px 18px;
+        text-align: center;
+        border-top: 1px solid var(--border);
+      }
+
+      .gallery-card__caption p {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--navy);
+        overflow-wrap: anywhere;
+      }
+
+      /* CALL TO ACTION */
+
+      .cta {
+        background: var(--navy);
+        color: var(--white);
+        padding: 85px 24px;
+        text-align: center;
+      }
+
+      .cta__inner {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .cta h2 {
+        font-size: clamp(28px, 3vw, 40px);
+        margin-bottom: 18px;
+      }
+
+      .cta p {
+        color: #e2e8f0;
+        margin-bottom: 30px;
+      }
+
+      .cta__button {
+        display: inline-block;
+        background: var(--white);
+        color: var(--navy);
+        padding: 15px 28px;
+        border-radius: 5px;
+        font-weight: 700;
+      }
+
+      .cta__button:hover {
+        background: #e9eef5;
+      }
+
+      /* HOMEPAGE-STYLE FOOTER */
+
+      .footer {
+        background: #101f34;
+        color: var(--white);
+        padding: 70px 24px 30px;
+      }
+
+      .footer__container {
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+
+      .footer__row {
+        display: grid;
+        grid-template-columns: 1.35fr 1fr 1.15fr 1.25fr;
+        gap: 45px;
+        align-items: start;
+      }
+
+      .footer__column h3 {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 22px;
+        color: var(--white);
+      }
+
+      /* COMPANY INFORMATION */
+
+      .footer__company {
+        max-width: 330px;
+      }
+
+      .footer__logo {
+        display: inline-block;
+        margin-bottom: 22px;
+      }
+
+      .footer__logo img {
+        width: 160px;
+        height: auto;
+      }
+
+      .footer__company p {
+        color: #cbd5e1;
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      /* FOOTER LINKS */
+
+      .footer__links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer__links li {
+        margin-bottom: 13px;
+      }
+
+      .footer__links a {
+        color: #cbd5e1;
+        font-size: 14px;
+        transition: color 200ms ease;
+      }
+
+      .footer__links a:hover {
+        color: var(--white);
+      }
+
+      /* CONTACT COLUMN */
+
+      .footer__contact p {
+        color: #cbd5e1;
+        font-size: 14px;
+        line-height: 1.8;
+        margin-bottom: 24px;
+      }
+
+      .footer__button {
+        display: inline-block;
+        background: var(--white);
+        color: var(--navy);
+        padding: 13px 18px;
+        border-radius: 5px;
+        font-size: 13px;
+        font-weight: 700;
+        text-align: center;
+        transition: background 200ms ease;
+      }
+
+      .footer__button:hover {
+        background: #e9eef5;
+      }
+
+      /* COPYRIGHT */
+
+      .footer__bottom {
+        margin-top: 55px;
+        padding-top: 25px;
+        border-top: 1px solid #35445a;
+        text-align: center;
+      }
+
+      .footer__bottom p {
+        color: #aebbd0;
+        font-size: 13px;
+      }
+
+      /* TABLET */
+
+      @media (max-width: 1100px) {
+        .nav__links {
+          gap: 15px;
+        }
+
+        .nav__links a {
+          font-size: 13px;
+        }
+
+        .gallery-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .footer__row {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 45px;
+        }
+      }
+
+      /* MOBILE NAVIGATION */
+
+      @media (max-width: 900px) {
+        .menu-toggle {
+          display: block;
+        }
+
+        .nav__links {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: var(--white);
+          padding: 25px;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0;
+          box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav__links.open {
+          display: flex;
+        }
+
+        .nav__links li {
+          width: 100%;
+        }
+
+        .nav__links a {
+          display: block;
+          padding: 13px 0;
+          font-size: 16px;
+        }
+
+        .nav__quote {
+          text-align: center;
+          margin-top: 12px;
+        }
+      }
+
+      /* SMALL SCREENS */
+
+      @media (max-width: 640px) {
+        .topbar__inner {
+          flex-direction: column;
+          text-align: center;
+          gap: 8px;
+        }
+
+        .topbar__contact {
+          flex-direction: column;
+          gap: 5px;
+        }
+
+        .nav {
+          min-height: 80px;
+        }
+
+        .nav__logo img {
+          width: 125px;
+        }
+
+        .hero {
+          padding: 80px 20px;
+        }
+
+        .hero p {
+          font-size: 15px;
+        }
+
+        .gallery-section {
+          padding: 60px 20px 75px;
+        }
+
+        .gallery-grid {
+          grid-template-columns: 1fr;
+          gap: 22px;
+        }
+
+        .gallery-card__image {
+          height: 320px;
+        }
+
+        .footer__row {
+          grid-template-columns: 1fr;
+          gap: 35px;
+        }
+
+        .footer__company {
+          max-width: 100%;
+        }
+
+        .footer__bottom {
+          margin-top: 40px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- TOP CONTACT BAR -->
+
+    <div class="topbar">
+      <div class="topbar__inner">
+        <p class="topbar__message">
+          Serving Greater Cincinnati and Surrounding Communities
+        </p>
+
+        <div class="topbar__contact">
+          <a href="tel:5135006096"> Call Us: 513-500-6096 </a>
+
+          <a href="mailto:hebuildsllc@gmail.com"> hebuildsllc@gmail.com </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVIGATION -->
+
+    <header class="header">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html" class="nav__logo">
+          <img src="assets/logo-metallic.svg" alt="HeBuilds LLC" />
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-controls="navigation-links"
+          aria-expanded="false"
+          onclick="toggleMenu()"
+        >
+          &#9776;
+        </button>
+
+        <ul class="nav__links" id="navigation-links">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+
+          <li>
+            <a href="index.html#about">About</a>
+          </li>
+
+          <li>
+            <a href="basement.html" class="active">Basements</a>
+          </li>
+
+          <li>
+            <a href="fullbath.html">Bathrooms</a>
+          </li>
+
+          <li>
+            <a href="#gallery">Galleries</a>
+          </li>
+
+          <li>
+            <a href="index.html#testimonials">Testimonials</a>
+          </li>
+
+          <li>
+            <a href="index.html#contact">Contact Us</a>
+          </li>
+
+          <li>
+            <a href="index.html#quote" class="nav__quote">
+              Request a Free Quote
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <div class="hero__inner">
+        <p class="hero__eyebrow">HeBuilds LLC Remodeling</p>
+
+        <h1>Beautifully Finished Basements</h1>
+
+        <p>
+          Explore completed basement transformations featuring inviting living
+          spaces, beautiful flooring, custom finishes, and thoughtfully designed
+          bathrooms.
+        </p>
+      </div>
+    </section>
+
+    <!-- FINISHED BASEMENT GALLERY -->
+
+    <section class="gallery-section" id="gallery">
+      <div class="gallery-container">
+        <div class="gallery-heading">
+          <h2>Finished Basement Photo Gallery</h2>
+
+          <p>
+            Click any photo to see the full-size image. Filenames are
+            temporarily displayed below each photo for easy identification.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- PHOTO 1 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_9451.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_9451.jpeg"
+                alt="Finished basement with wood-look flooring"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_9451.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 2 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_9452.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_9452.jpeg"
+                alt="Finished basement entertainment area"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_9452.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 3 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_9455.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_9455.jpeg"
+                alt="Wide view of finished basement"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_9455.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 4 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_9454.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_9454.jpeg"
+                alt="Finished basement interior"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_9454.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 5 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_9456.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_9456.jpeg"
+                alt="Completed bathroom double vanity"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_9456.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 6 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_9458.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_9458.jpeg"
+                alt="Completed basement bathroom with tiled shower"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_9458.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 7 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_9444.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_9444.jpeg"
+                alt="Completed basement room"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_9444.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 8 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_9445.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_9445.jpeg"
+                alt="Completed basement hallway"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_9445.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 9 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_9448.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_9448.jpeg"
+                alt="Finished basement room with double doors"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_9448.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 10 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_8739.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_8739.jpeg"
+                alt="Finished carpeted basement"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_8739.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 11 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_8741.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_8741.jpeg"
+                alt="Finished carpeted living space"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_8741.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 12 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_8744.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_8744.jpeg"
+                alt="Wide view of finished carpeted basement"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_8744.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 13 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_9440.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_9440.jpeg"
+                alt="Completed basement remodeling project"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_9440.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 14 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_9442.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_9442.jpeg"
+                alt="Completed basement living space"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_9442.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 15 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_9443.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_9443.jpeg"
+                alt="Completed basement interior"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_9443.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 16 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_9446.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_9446.jpeg"
+                alt="Finished basement renovation"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_9446.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 17 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_9447.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_9447.jpeg"
+                alt="Finished basement with new flooring"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_9447.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 18 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_9449.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_9449.jpeg"
+                alt="Finished basement living area"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_9449.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 19 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_9450.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_9450.jpeg"
+                alt="Finished basement remodeling detail"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_9450.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 20 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_9453.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_9453.jpeg"
+                alt="Completed basement room"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_9453.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 21 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_9457.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_9457.jpeg"
+                alt="Completed basement bathroom interior"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_9457.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 22 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_9459.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_9459.jpeg"
+                alt="Completed basement bathroom"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_9459.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 23 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_8740.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_8740.jpeg"
+                alt="Completed carpeted basement room"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_8740.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 24 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_8742.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_8742.jpeg"
+                alt="Finished carpeted basement area"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_8742.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 25 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_8743.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_8743.jpeg"
+                alt="Completed carpeted basement interior"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_8743.jpeg</p>
+            </figcaption>
+          </figure>
+
+          <!-- PHOTO 26 -->
+
+          <figure class="gallery-card">
+            <a
+              class="gallery-card__image"
+              href="assets/basement/IMG_8745.jpeg"
+              target="_blank"
+            >
+              <img
+                src="assets/basement/IMG_8745.jpeg"
+                alt="Completed carpeted basement living space"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="gallery-card__caption">
+              <p>IMG_8745.jpeg</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+
+    <section class="cta">
+      <div class="cta__inner">
+        <h2>Ready to Transform Your Basement?</h2>
+
+        <p>
+          Let HeBuilds LLC help turn your unfinished or outdated basement into a
+          comfortable, functional space designed around your needs.
+        </p>
+
+        <a href="index.html#quote" class="cta__button">
+          Request a Free Quote
+        </a>
+      </div>
+    </section>
+
+    <!-- HOMEPAGE-STYLE FOOTER -->
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__row">
+          <!-- COMPANY INFORMATION -->
+
+          <div class="footer__column footer__company">
+            <a href="index.html" class="footer__logo">
+              <img src="assets/logo-silver.svg" alt="HeBuilds LLC Logo" />
+            </a>
+
+            <p>
+              Basement and bathroom remodeling with a family commitment to
+              quality craftsmanship and lasting relationships.
+            </p>
+          </div>
+
+          <!-- QUICK LINKS -->
+
+          <div class="footer__column">
+            <h3>Quick Links</h3>
+
+            <ul class="footer__links">
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+
+              <li>
+                <a href="about.html">About Us</a>
+              </li>
+
+              <li>
+                <a href="index.html#services">Services</a>
+              </li>
+
+              <li>
+                <a href="index.html#testimonials">Testimonials</a>
+              </li>
+
+              <li>
+                <a href="index.html#quote">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- OUR SERVICES -->
+
+          <div class="footer__column">
+            <h3>Our Services</h3>
+
+            <ul class="footer__links">
+              <li>
+                <a href="basement.html">Basement Remodeling</a>
+              </li>
+
+              <li>
+                <a href="fullbath.html">Full Bath Remodeling</a>
+              </li>
+
+              <li>
+                <a href="index.html#services">Half Bath Remodeling</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- CONTACT -->
+
+          <div class="footer__column footer__contact">
+            <h3>Contact HeBuilds LLC</h3>
+
+            <p>Serving Greater Cincinnati and surrounding communities.</p>
+
+            <a href="index.html#quote" class="footer__button">
+              Request a Free Quote
+            </a>
+          </div>
+        </div>
+
+        <!-- COPYRIGHT -->
+
+        <div class="footer__bottom">
+          <p>&copy; 2026 HeBuilds LLC. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MOBILE NAVIGATION SCRIPT -->
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("navigation-links");
+        const button = document.querySelector(".menu-toggle");
+
+        const isOpen = menu.classList.toggle("open");
+
+        button.setAttribute("aria-expanded", isOpen);
+        button.innerHTML = isOpen ? "&times;" : "&#9776;";
+      }
+
+      document.querySelectorAll(".nav__links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          const menu = document.getElementById("navigation-links");
+          const button = document.querySelector(".menu-toggle");
+
+          menu.classList.remove("open");
+          button.setAttribute("aria-expanded", "false");
+          button.innerHTML = "&#9776;";
+        });
+      });
+    </script>
+  </body>
+</html>

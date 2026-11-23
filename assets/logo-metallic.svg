@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 760" role="img" aria-label="HeBuilds company logo">
+ <defs><linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#faf9f4"/><stop offset=".27" stop-color="#a4a4a0"/><stop offset=".52" stop-color="#e3e1dc"/><stop offset=".76" stop-color="#777875"/><stop offset="1" stop-color="#c7c5c0"/></linearGradient></defs>
+ <g fill="none" stroke="#7C7C79" stroke-width="12" stroke-linejoin="miter">
+ <path d="M218 345 V174 L350 55 L482 174 V345"/>
+ <path d="M85 590 V310 L170 265 V590 M530 590 V265 L615 310 V590"/>
+ </g>
+ <g fill="url(#metal)">
+ <path d="M100 322 L156 291 V418 L100 438 Z M544 291 L600 322 V438 L544 418 Z"/>
+ </g>
+ <g fill="#171917"><path d="M111 329 L123 322 V351 L111 357 Z M133 316 L145 309 V341 L133 347 Z M111 368 L123 362 V391 L111 397 Z M133 356 L145 350 V382 L133 388 Z M555 309 L567 316 V347 L555 341 Z M577 322 L589 329 V357 L577 351 Z M555 350 L567 356 V388 L555 382 Z M577 362 L589 368 V397 L577 391 Z"/></g>
+ <g fill="url(#metal)"><path d="M243 178 L283 149 V258 L321 241 V123 L343 108 V364 L321 364 V284 L283 301 V364 L243 364 Z"/><path d="M360 110 L453 170 V206 L399 172 V235 L445 253 V289 L399 272 V331 L453 346 V381 L360 364 Z"/></g>
+ <text x="350" y="545" text-anchor="middle" fill="url(#metal)" font-family="Arial Narrow, Impact, sans-serif" font-size="125" font-stretch="condensed" font-weight="900" textLength="520" lengthAdjust="spacingAndGlyphs">BUILDS</text>
+ <g fill="url(#metal)">
+ <path d="M150 575 h12 v42 l-12 -10 Z M188 575 h12 v79 l-12 -10 Z M226 575 h12 v115 l-12 -10 Z M264 575 h12 v149 l-12 -10 Z M302 575 h12 v171 l-12 -10 Z M340 575 h12 v182 l-12 0 Z M378 575 h12 v171 l-12 10 Z M416 575 h12 v149 l-12 10 Z M454 575 h12 v115 l-12 10 Z M492 575 h12 v79 l-12 10 Z M530 575 h12 v42 l-12 10 Z"/>
+ </g>
+ </svg>

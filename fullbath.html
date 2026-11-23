@@ -167,33 +167,45 @@
     /* MOBILE NAVIGATION */
     .fullbath-mobile-menu {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: min(340px, 85vw);
+      inset: 0;
+      width: 100%;
       height: 100vh;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 100px 24px 40px;
       background-color: #ffffff;
-      padding: 75px 28px 32px;
-      box-shadow: 10px 0 35px rgba(0, 0, 0, 0.16);
-      transform: translateX(-110%);
-      transition: transform 300ms ease;
       overflow-y: auto;
       z-index: 1000;
+      opacity: 0;
       visibility: hidden;
+      transform: translateX(-100%);
+      transition: transform 350ms ease, opacity 300ms ease, visibility 350ms ease;
     }
 
     .fullbath-mobile-menu.is-open {
+      opacity: 1;
       transform: translateX(0);
       visibility: visible;
     }
 
     .fullbath-mobile-menu__close {
       position: absolute;
-      top: 20px;
+      z-index: 1002;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      top: 56px;
       right: 20px;
       background: transparent;
       border: none;
       color: #182c49;
-      font-size: 30px;
+      font-size: 38px;
+      line-height: 1;
       cursor: pointer;
     }
 
@@ -201,6 +213,8 @@
       display: flex;
       flex-direction: column;
       gap: 22px;
+      align-items: center;
+      text-align: center;
       list-style: none;
       margin: 0;
       padding: 0;
@@ -240,7 +254,7 @@
     }
 
     .fullbath-menu-overlay.is-open {
-      display: block;
+      display: none;
     }
 
     /* GALLERY HERO */
@@ -593,6 +607,117 @@
         gap: 32px;
       }
     }
+
+    /* FOOTER QUOTE BUTTON — ALL SCREEN SIZES */
+    .fullbath-footer a.fullbath-footer__quote {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      max-width: 100%;
+      padding: 13px 18px;
+      background: #243e63;
+      border: 2px solid #9fb0c6;
+      border-radius: 6px;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .fullbath-footer a.fullbath-footer__quote:hover {
+      background: #405a7d;
+      border-color: #ffffff;
+    }
+
+    .fullbath-footer__tablet-quote {
+      display: none;
+    }
+
+    /* TABLET FOOTER — TWO COLUMNS WITH QUOTE CENTERED BELOW */
+    @media (min-width: 641px) and (max-width: 1024px) {
+      .fullbath-footer__brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .fullbath-footer__brand p {
+        text-align: center;
+      }
+
+      .fullbath-footer__inner > div:nth-child(2),
+      .fullbath-footer__inner > div:nth-child(4) {
+        position: relative;
+        left: 16px;
+      }
+
+      .fullbath-footer__contact .fullbath-footer__quote {
+        display: none !important;
+      }
+
+      .fullbath-footer__tablet-quote {
+        display: flex;
+        justify-content: center;
+        margin: 34px auto 0;
+      }
+    }
+
+    /* MOBILE FOOTER — BRAND CENTERED, CONTACT AND QUOTE SIDE BY SIDE */
+    @media (max-width: 640px) {
+      .fullbath-footer__inner {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px 18px;
+      }
+
+      .fullbath-footer__brand {
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .fullbath-footer__brand p {
+        text-align: center;
+      }
+
+      .fullbath-footer__contact {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 0 18px;
+        align-items: start;
+      }
+
+      .fullbath-footer__contact h3,
+      .fullbath-footer__contact ul {
+        grid-column: 1;
+      }
+
+      .fullbath-footer__contact .fullbath-footer__quote {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        justify-self: center;
+        align-self: start;
+        white-space: normal;
+        margin-top: 0;
+      }
+    }
+
+    /* Always-visible, indented remodeling links in mobile/tablet menu. */
+    .fullbath-mobile-menu__links li:has(> a[href="basement.html"]),
+    .fullbath-mobile-menu__links li:has(> a[href="fullbath.html"]),
+    .fullbath-mobile-menu__links li:has(> a[href="halfbath.html"]) {
+      padding-left: 18px;
+    }
+    .fullbath-mobile-menu__links li > a[href="basement.html"],
+    .fullbath-mobile-menu__links li > a[href="fullbath.html"],
+    .fullbath-mobile-menu__links li > a[href="halfbath.html"] {
+      font-size: 15px;
+    }
   </style>
 </head>
 
@@ -708,15 +833,6 @@
         </p>
       </div>
     </section>
-
-    <!-- LINKS TO ALL THREE GALLERIES -->
-    <nav class="fullbath-gallery-links" aria-label="Remodeling galleries">
-      <a href="basement.html">Basement Gallery</a>
-      <a href="fullbath.html" class="active" aria-current="page">
-        Full Bathroom Gallery
-      </a>
-      <a href="halfbath.html">Half Bathroom Gallery</a>
-    </nav>
 
     <!-- FINISHED BATHROOM PHOTO GALLERY -->
     <section class="fullbath-section" id="gallery">
@@ -912,15 +1028,19 @@
       </div>
 
       <!-- CONTACT -->
-      <div>
+      <div class="fullbath-footer__contact">
         <h3>Contact Us</h3>
         <ul>
           <li><a href="tel:5135006096">513-500-6096</a></li>
           <li><a href="mailto:hebuildsllc@gmail.com">hebuildsllc@gmail.com</a></li>
           <li>Greater Cincinnati, Ohio</li>
-          <li><a href="index.html#quote">Request a Free Quote</a></li>
         </ul>
+        <a href="index.html#quote" class="fullbath-footer__quote">Request a Free Quote</a>
       </div>
+    </div>
+
+    <div class="fullbath-footer__tablet-quote">
+      <a href="index.html#quote" class="fullbath-footer__quote">Request a Free Quote</a>
     </div>
 
     <div class="fullbath-footer__bottom">

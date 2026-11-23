@@ -109,6 +109,103 @@
           display: flex;
         }
       }
+
+      /* TABLET AND MOBILE HERO: heading, image, description, then two buttons. */
+      @media (max-width: 1024px) {
+        .hero .hero__row {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .hero .hero__content {
+          display: contents;
+        }
+
+        .hero .hero__identity {
+          order: 1;
+          width: 100%;
+          text-align: center;
+        }
+
+        .hero .hero__image {
+          order: 2;
+          width: 100%;
+        }
+
+        .hero .hero__description {
+          order: 3;
+          width: 100%;
+          text-align: center;
+        }
+
+        .hero .hero__actions {
+          order: 4;
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+          gap: 10px;
+          width: 100%;
+          align-items: stretch;
+        }
+
+        .hero .hero__actions .button {
+          width: 100%;
+          min-width: 0;
+          height: 100%;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 12px 8px;
+          font-size: 12px;
+          line-height: 1.35;
+          text-align: center;
+          white-space: normal;
+        }
+      }
+
+      /* Give the two hero buttons comfortable sizing on tablets. */
+      @media (min-width: 641px) and (max-width: 1024px) {
+        .hero .hero__actions .button {
+          padding: 14px 18px;
+          font-size: 15px;
+        }
+      }
+
+      /* On tablets and phones, place the About headings above the photos,
+         followed by the original About paragraphs. Desktop is unchanged. */
+      @media (max-width: 1024px) {
+        .about__row {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .about__content {
+          display: contents;
+        }
+
+        .about__subtitle,
+        .about__title {
+          order: 0;
+          width: 100%;
+          max-width: 800px;
+          text-align: center;
+        }
+
+        .about__title {
+          margin-bottom: 0;
+        }
+
+        .about__media {
+          order: 1;
+        }
+
+        .about__content > p:not(.about__subtitle) {
+          order: 2;
+          width: 100%;
+          max-width: 800px;
+        }
+      }
     </style>
   </head>
 

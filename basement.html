@@ -402,8 +402,8 @@
             >About Us</a
           >
 
-          <details class="mobile__dropdown">
-            <summary class="modal__link">Services</summary>
+          <div class="mobile__dropdown">
+            <div class="modal__link mobile__services-label">Services</div>
             <div class="mobile__submenu">
               <a href="basement.html" onclick="closeMenu()"
                 >Basement Remodeling</a
@@ -415,7 +415,7 @@
                 >Half Bathroom Remodeling</a
               >
             </div>
-          </details>
+          </div>
 
           <a
             href="index.html#testimonials"
@@ -787,7 +787,7 @@
           <div class="footer__column footer__contact">
             <h3>Contact HeBuilds LLC</h3>
             <p>Serving Greater Cincinnati and surrounding communities.</p>
-            <a href="index.html#quote" class="footer__button"
+            <a href="index.html#quote" class="button button--primary footer__button"
               >Request a Free Quote</a
             >
           </div>
@@ -798,5 +798,18 @@
         </div>
       </div>
     </footer>
+  <script>
+    function openMenu() {
+      document.body.classList.add("menu--open");
+      const button = document.querySelector(".navbar .btn__menu");
+      if (button) button.setAttribute("aria-expanded", "true");
+    }
+
+    function closeMenu() {
+      document.body.classList.remove("menu--open");
+      const button = document.querySelector(".navbar .btn__menu");
+      if (button) button.setAttribute("aria-expanded", "false");
+    }
+  </script>
   </body>
 </html>

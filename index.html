@@ -43,6 +43,72 @@
           margin-right: 0;
         }
       }
+
+      /* ========================================
+         CONSISTENT DESKTOP NAVIGATION
+         Full-width positioning with 32px padding.
+         Font sizes follow index.html.
+      ======================================== */
+
+      @media (min-width: 1101px) {
+        nav.navbar .nav__row {
+          width: 100%;
+          max-width: none;
+          min-height: 94px;
+          margin: 0 auto;
+          padding: 16px 32px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 24px;
+          box-sizing: border-box;
+        }
+
+        nav.navbar .nav__link--list {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          flex-wrap: nowrap;
+          gap: 24px;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+
+        nav.navbar .nav__link,
+        nav.navbar .nav__quote {
+          font-size: 17px;
+          white-space: nowrap;
+        }
+
+        nav.navbar .btn__menu {
+          display: none;
+        }
+      }
+
+      @media (min-width: 1281px) and (max-width: 1400px) {
+        nav.navbar .nav__link,
+        nav.navbar .nav__quote {
+          font-size: 15px;
+        }
+      }
+
+      @media (min-width: 1101px) and (max-width: 1280px) {
+        nav.navbar .nav__link,
+        nav.navbar .nav__quote {
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 1100px) {
+        nav.navbar .nav__link--list {
+          display: none;
+        }
+
+        nav.navbar .btn__menu {
+          display: flex;
+        }
+      }
     </style>
   </head>
 
@@ -81,7 +147,7 @@
           >
             <img
               class="nav__logo"
-              src="assets/logo-metallic.svg"
+              src="assets/logo-silver.svg"
               alt="HeBuilds LLC logo"
             />
 
@@ -105,7 +171,7 @@
             </li>
 
             <li class="nav__item">
-              <a href="about.html" class="nav__link">About Us</a>
+              <a href="index.html#about" class="nav__link">About Us</a>
             </li>
 
             <li class="nav__item nav__item--dropdown">
@@ -134,7 +200,7 @@
             </li>
 
             <li class="nav__item">
-              <a href="index.html#quote" class="nav__link"> Contact </a>
+              <a href="index.html#quote" class="nav__link">Contact</a>
             </li>
 
             <li class="nav__item">
@@ -190,7 +256,7 @@
             Home
           </a>
 
-          <a href="about.html" class="modal__link" onclick="closeMenu()">
+          <a href="index.html#about" class="modal__link" onclick="closeMenu()">
             About Us
           </a>
 
@@ -401,7 +467,7 @@
 
               <article class="service__card">
                 <img
-                  src="assets/full-bathroom/img_0151.jpg"
+                  src="assets/full-bathroom/img_0015.jpeg"
                   alt="Beautiful bathroom remodeling project"
                   loading="lazy"
                 />
@@ -433,118 +499,6 @@
       </section>
 
       <!-- ========================================
-         WHY CHOOSE US
-      ======================================== -->
-
-      <section class="benefits">
-        <div class="container">
-          <div class="row">
-            <div class="section__heading">
-              <p class="section__eyebrow">WHY HEBUILDS LLC</p>
-
-              <h2>Remodeling Built Around You</h2>
-
-              <p>
-                We believe a successful remodeling project starts with
-                understanding your home, your goals, and your expectations.
-              </p>
-            </div>
-
-            <div class="benefits__grid">
-              <article class="benefit__card">
-                <div class="benefit__number">01</div>
-
-                <h3>Family-Centered Service</h3>
-
-                <p>
-                  We value personal relationships and treat each remodeling
-                  project with care and attention.
-                </p>
-              </article>
-
-              <article class="benefit__card">
-                <div class="benefit__number">02</div>
-
-                <h3>Quality Craftsmanship</h3>
-
-                <p>
-                  We focus on thoughtful details, practical solutions, and work
-                  designed to enhance your home.
-                </p>
-              </article>
-
-              <article class="benefit__card">
-                <div class="benefit__number">03</div>
-
-                <h3>Clear Communication</h3>
-
-                <p>
-                  We want homeowners to feel informed and comfortable throughout
-                  the remodeling process.
-                </p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========================================
-         OUR PROCESS
-      ======================================== -->
-
-      <section class="process section--light">
-        <div class="container">
-          <div class="row">
-            <div class="section__heading">
-              <p class="section__eyebrow">HOW IT WORKS</p>
-
-              <h2>Our Remodeling Process</h2>
-
-              <p>
-                A straightforward approach to planning and completing your
-                remodeling project.
-              </p>
-            </div>
-
-            <div class="process__grid">
-              <article class="process__step">
-                <div class="process__number">01</div>
-
-                <h3>Tell Us About Your Project</h3>
-
-                <p>
-                  Share your ideas, your goals, and the improvements you'd like
-                  to make to your home.
-                </p>
-              </article>
-
-              <article class="process__step">
-                <div class="process__number">02</div>
-
-                <h3>Plan Your Remodel</h3>
-
-                <p>
-                  We'll discuss your project and help identify a practical path
-                  toward your goals.
-                </p>
-              </article>
-
-              <article class="process__step">
-                <div class="process__number">03</div>
-
-                <h3>Bring Your Vision to Life</h3>
-
-                <p>
-                  Watch your space take shape as your remodeling plans become
-                  reality.
-                </p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========================================
          TESTIMONIALS
       ======================================== -->
 
@@ -554,7 +508,7 @@
             <div class="section__heading">
               <p class="section__eyebrow">HOMEOWNER EXPERIENCES</p>
 
-              <h2>What Our Customers Say</h2>
+              <h2>Testimonials</h2>
 
               <p>
                 Examples of the kinds of remodeling experiences we strive to
@@ -963,7 +917,7 @@
 
             <ul class="footer__links">
               <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
+              <li><a href="index.html#about">About Us</a></li>
               <li><a href="index.html#services">Services</a></li>
               <li>
                 <a href="index.html#testimonials">Testimonials</a>
@@ -1002,7 +956,7 @@
             </p>
 
             <p>
-              <a href="mailto:hebuildsllc@gmail.com"> hebuildsllc@gmail.com </a>
+              <a href="mailto:hebuildsllc@gmail.com">hebuildsllc@gmail.com</a>
             </p>
 
             <a

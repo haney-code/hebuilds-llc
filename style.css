@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@600;700;800;900&display=swap");
 
 /* ========================================
@@ -25,7 +24,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 85px;
+  scroll-padding-top: 0px;
 }
 
 body {
@@ -78,7 +77,7 @@ p {
 }
 
 section[id] {
-  scroll-margin-top: 85px;
+  scroll-margin-top: 0px;
 }
 
 /* ========================================
@@ -620,7 +619,6 @@ section[id] {
 
 /* ========================================
    HERO SECTION
-   40% TEXT / 60% IMAGE
 ======================================== */
 
 .hero {
@@ -733,7 +731,7 @@ section[id] {
 
 .about__content > p:not(.about__subtitle) {
   color: #4a5568;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.95;
   margin-bottom: 19px;
 }
@@ -749,8 +747,11 @@ section[id] {
 }
 
 /* ========================================
-   NEW ABOUT PHOTO GRID
-   ONE TOP / TWO BOTTOM
+   ABOUT PHOTO GRID
+======================================== */
+
+/* ========================================
+   ABOUT PHOTO GRID
 ======================================== */
 
 .about__media {
@@ -760,8 +761,6 @@ section[id] {
   flex-direction: column;
   gap: 14px;
 }
-
-/* Top image spans the full photo column. */
 
 .about__image--top {
   width: 100%;
@@ -778,8 +777,6 @@ section[id] {
   object-position: center;
   transition: transform 350ms ease;
 }
-
-/* Bottom images are two equal columns. */
 
 .about__image--bottom {
   display: grid;
@@ -798,8 +795,6 @@ section[id] {
   box-shadow: 0 10px 25px rgba(24, 44, 73, 0.1);
   transition: transform 350ms ease;
 }
-
-/* Subtle hover effect on desktop. */
 
 .about__image--top:hover img {
   transform: scale(1.025);
@@ -837,10 +832,18 @@ section[id] {
   box-shadow: 0 16px 35px rgba(24, 44, 73, 0.12);
 }
 
+/* Portrait images for Basement and Bathroom Remodeling */
+
+/* Smaller portrait images for Basement and Bathroom Remodeling */
+
 .service__card > img {
-  width: 100%;
-  height: 300px;
+  display: block;
+  width: 65%;
+  height: 350px;
+  margin: 20px auto 0;
   object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
 }
 
 .service__card--content {
@@ -1097,7 +1100,7 @@ section[id] {
 
 .testimonials__cta > p {
   color: var(--muted);
-  font-size: 15px;
+  font-size: 18px;
   margin-bottom: 24px;
 }
 
@@ -1201,7 +1204,7 @@ section[id] {
 
 .quote__highlights p {
   color: #ffffff;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
 }
 
@@ -1416,7 +1419,6 @@ footer .container {
 ======================================== */
 
 @media (max-width: 1400px) {
-
   .nav__row {
     min-height: 105px;
     padding: 12px 24px 12px 54px;
@@ -1461,7 +1463,6 @@ footer .container {
     font-size: 12px;
     padding: 11px 12px;
   }
-
 }
 
 /* ========================================
@@ -1469,7 +1470,6 @@ footer .container {
 ======================================== */
 
 @media (max-width: 1280px) {
-
   .nav__row {
     gap: 10px;
   }
@@ -1535,7 +1535,6 @@ footer .container {
   .testimonial__card {
     padding: 30px 24px;
   }
-
 }
 
 /* ========================================
@@ -1543,7 +1542,6 @@ footer .container {
 ======================================== */
 
 @media (max-width: 1100px) {
-
   .nav__row {
     min-height: 90px;
     padding: 12px 28px;
@@ -1575,7 +1573,6 @@ footer .container {
     display: flex;
     margin-left: auto;
   }
-
 }
 
 /* ========================================
@@ -1583,7 +1580,6 @@ footer .container {
 ======================================== */
 
 @media (max-width: 1024px) {
-
   .container {
     padding: 80px 28px;
   }
@@ -1660,10 +1656,6 @@ footer .container {
     gap: 20px;
   }
 
-  .service__card > img {
-    height: 250px;
-  }
-
   .service__card--content {
     padding: 24px;
   }
@@ -1723,7 +1715,6 @@ footer .container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 45px;
   }
-
 }
 
 /* ========================================
@@ -1731,7 +1722,6 @@ footer .container {
 ======================================== */
 
 @media (max-width: 768px) {
-
   .container {
     padding: 75px 24px;
   }
@@ -1784,10 +1774,6 @@ footer .container {
   .services__grid {
     grid-template-columns: 1fr;
     max-width: 600px;
-  }
-
-  .service__card > img {
-    height: 300px;
   }
 
   .service__card--content {
@@ -1858,7 +1844,6 @@ footer .container {
   .quote__form--wrapper {
     padding: 35px 28px;
   }
-
 }
 
 /* ========================================
@@ -1866,7 +1851,6 @@ footer .container {
 ======================================== */
 
 @media (max-width: 640px) {
-
   html {
     scroll-padding-top: 70px;
   }
@@ -1994,7 +1978,7 @@ footer .container {
   }
 
   .about__content > p:not(.about__subtitle) {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   /* MOBILE ABOUT PHOTO ARRANGEMENT */
@@ -2013,10 +1997,6 @@ footer .container {
 
   .about__image--bottom img {
     height: 150px;
-  }
-
-  .service__card > img {
-    height: 220px;
   }
 
   .service__card--content {
@@ -2091,7 +2071,7 @@ footer .container {
   }
 
   .testimonials__cta > p {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .testimonials__contact {
@@ -2168,7 +2148,6 @@ footer .container {
   .footer__bottom {
     margin-top: 45px;
   }
-
 }
 
 /* ========================================
@@ -2176,7 +2155,6 @@ footer .container {
 ======================================== */
 
 @media (max-width: 380px) {
-
   .nav__row {
     padding: 10px 14px;
   }
@@ -2239,7 +2217,6 @@ footer .container {
   .footer__company {
     grid-column: auto;
   }
-
 }
 
 /* ========================================
@@ -2252,7 +2229,6 @@ footer .container {
 }
 
 @media (prefers-reduced-motion: reduce) {
-
   html {
     scroll-behavior: auto;
   }
@@ -2263,5 +2239,50 @@ footer .container {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
-
 }
+
+/* ========================================
+   DESKTOP-ONLY SECTION TYPOGRAPHY
+======================================== */
+
+@media (min-width: 1025px) {
+  .about__subtitle,
+  .section__eyebrow {
+    font-size: 20px;
+  }
+
+  .section__heading > p:last-child {
+    font-size: 18px;
+  }
+}
+
+/* ========================================
+   GALLERY PAGE FOOTER LOGO ALIGNMENT
+======================================== */
+
+footer .footer__company .footer__logo {
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer .footer__company > p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========================================
+   GALLERY FOOTER LOGO SIZE AND SPACING
+======================================== */
+
+.footer__company .footer__logo img {
+  width: 128px;
+  height: auto;
+}
+
+.footer__company .footer__logo {
+  margin-bottom: 8px;
+}
+

@@ -24,6 +24,7 @@
 
     .fullbath-topbar__inner {
       width: 100%;
+      max-width: 1280px;
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -34,14 +35,45 @@
     .fullbath-topbar p {
       margin: 0;
       color: #ffffff;
-      font-size: 13px;
+      font-size: 12px;
+      font-weight: 500;
     }
 
     .fullbath-topbar a {
       color: #ffffff;
-      font-size: 13px;
-      font-weight: 600;
+      font-size: 12px;
+      font-weight: 500;
       text-decoration: none;
+    }
+
+    .fullbath-topbar__contact {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+    }
+
+    .fullbath-topbar__contact a {
+      white-space: nowrap;
+    }
+
+    @media (max-width: 768px) {
+      .fullbath-topbar p,
+      .fullbath-topbar a {
+        font-size: 11px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .fullbath-topbar p,
+      .fullbath-topbar a {
+        font-size: 10px;
+      }
+
+      .fullbath-topbar__contact {
+        justify-content: center;
+      }
     }
 
     /* HEADER AND NAVIGATION */
@@ -725,7 +757,10 @@
   <div class="fullbath-topbar">
     <div class="fullbath-topbar__inner">
       <p>Serving Greater Cincinnati and Surrounding Communities</p>
-      <a href="tel:5135006096">Call Us: 513-500-6096</a>
+      <div class="fullbath-topbar__contact">
+        <a href="tel:5135006096">Call or Text: 513-500-6096</a>
+        <a href="mailto:hebuildsllc@gmail.com">Email: hebuildsllc@gmail.com</a>
+      </div>
     </div>
   </div>
 
